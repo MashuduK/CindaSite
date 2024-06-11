@@ -1,0 +1,293 @@
+/* General Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #fff;
+    background: linear-gradient(to bottom right, #34495e, #2c3e50);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header Styling */
+header {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav .logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav li {
+    margin-left: 2rem;
+}
+
+nav a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e67e22;
+}
+
+/* Hero Section Styling */
+#hero {
+    padding: 8rem 0 6rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#hero img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border: 4px solid #fff;
+}
+
+#hero .content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero .content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.button {
+    background-color: #e67e22;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #d35400;
+}
+
+/* About Section */
+#about {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+#services {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 80%;
+}
+
+.service {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Timeline for Experience */
+.timeline {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #fff;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline li {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline li:before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #e67e22;
+    left: 50%;
+    margin-left: -6px;
+    top: 10px;
+}
+
+.timeline h3 {
+    margin-bottom: 0.5rem;
+}
+
+
+/* Booking Section */
+#booking {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+/* Booking Section */
+#booking {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#booking h2 {
+    margin-bottom: 2rem; /* Add space below heading */
+}
+
+#booking form {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease; /* Add fade-in animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column; /* Stack labels and inputs vertically */
+}
+
+label {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 1rem; /* Increase padding for a more spacious look */
+    border: none; /* Remove default border */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Add a bottom border */
+    background-color: transparent; /* Make background transparent */
+    color: #fff;
+    font-size: 1rem; /* Make font size larger */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-bottom-color: #e67e22;
+}
+
+textarea {
+    resize: vertical; /* Allow resizing only vertically */
+}
+
+button[type="submit"] {
+    background-color: #e67e22;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #d35400;
+    transform: translateY(-2px); /* Slightly lift on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+/* Contact Section */
+#contact {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#contact a {
+    color: #fff;
+    margin: 0 1rem; /* Add space between contact icons */
+}
+
+#contact a:hover {
+    color: #e67e22;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
