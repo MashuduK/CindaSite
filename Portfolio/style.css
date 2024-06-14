@@ -1,0 +1,246 @@
+/* Basic Layout */
+body {
+    font-family: 'Arial', sans-serif; 
+    background-color: #222;
+    color: #d4af37; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; 
+    overflow-x: hidden; /* Prevent horizontal scrollbar due to icons */
+}
+
+/* Icon Container (for animation) */
+.icon-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place behind other content */
+    pointer-events: none; /* Make icons unclickable */
+}
+
+.icon {
+    position: absolute;
+    width: 30px; /* Adjust icon size as needed */
+    height: 30px;
+    background-image: url('path/to/your/icon.png'); /* Replace with your icon image */
+    animation: floatAnimation 5s linear infinite; /* Animation for floating */
+}
+
+@keyframes floatAnimation {
+    0% { top: 100%; left: 0%; }
+    100% { top: -10%; left: 100%; }
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1em;
+}
+
+/* ... (rest of the styles from the previous response) ... */
+/* Basic Layout */
+body {
+    font-family: 'Arial', sans-serif; /* Highly readable font */
+    background-color: #222; /* Dark background */
+    color: #d4af37; /* Golden text for readability and a touch of flair */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; 
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 500; /* Slightly bolder headings */
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em; 
+}
+
+h2 {
+    font-size: 2.5em; 
+}
+
+h3 {
+    font-size: 1.8em; 
+}
+
+.subheading {
+    font-size: 1.2em;
+    color: #a67c22; /* Darker gold for subheadings */
+}
+
+/* Funky Text Styles */
+.funky-text {
+    font-family: 'Bungee Shade', cursive; 
+    color: #d4af37; /* Golden color for the funky text */
+    text-shadow: 0 0 5px #a67c22; /* Subtle text shadow for depth */
+}
+
+/* Navigation */
+nav {
+    background-color: #333; 
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d4af37; /* Golden link color */
+    transition: color 0.3s ease; 
+}
+
+nav a:hover {
+    color: #a67c22; /* Darker gold on hover */
+}
+
+/* About Section */
+#about {
+    padding: 2em;
+}
+
+.skills-container {
+    display: flex; 
+    align-items: flex-start; 
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin-left: 20px; 
+    columns: 2; 
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.skills-list li {
+    margin-bottom: 5px; 
+}
+
+/* Experience & Education Sections */
+#experience, #education {
+    padding: 2em;
+}
+
+.job, #education ul {
+    margin-bottom: 1.5em; 
+}
+
+.job ul li {
+    animation: fadeInUp 0.5s ease forwards; 
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.job ul li:nth-child(1) { animation-delay: 0.2s; }
+.job ul li:nth-child(2) { animation-delay: 0.4s; }
+.job ul li:nth-child(3) { animation-delay: 0.6s; }
+/* ... add more delays for additional list items */
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Section */
+#contact {
+    padding: 2em;
+}
+
+#contact-form {
+    max-width: 400px;
+    margin: 0 auto; 
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid #555; 
+    background-color: #333; 
+    color: #d4af37; /* Golden text in form fields */
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #d4af37; /* Golden button */
+    color: #222;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #a67c22; /* Darker gold on hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    nav li {
+        margin: 10px 0; 
+        display: block;
+    }
+
+    .skills-container {
+        flex-direction: column; 
+    }
+
+    .skills-list {
+        columns: 1; 
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        margin-left: 0;
+    }
+}
