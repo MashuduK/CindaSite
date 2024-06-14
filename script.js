@@ -14,11 +14,16 @@ $(document).ready(function(){
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('bookingForm');
+    const submitButton = form.querySelector('button[type="submit"]');
 
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission
 
         // Optionally, you can add client-side validation here
+
+        // Show loading state
+        submitButton.disabled = true; // Disable submit button
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...'; // Change submit button text/icon
 
         // Submit the form data using Fetch API or Axios (example using Fetch API)
         fetch(form.action, {
@@ -39,6 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Error:', error);
             // Handle error scenario (e.g., display error message to the user)
+        })
+        .finally(() => {
+            submitButton.disabled = false; // Re-enable submit button
+            submitButton.innerHTML = 'Submit'; // Restore submit button text
         });
     });
 
