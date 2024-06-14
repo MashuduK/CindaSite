@@ -1,4 +1,13 @@
-function scheduleConsultation() {
-    // Logic to handle appointment scheduling (e.g., open a calendar, email, or link)
-    alert("This feature is coming soon!");
-}
+// script.js
+
+$(document).ready(function(){
+    $('.qualification-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+});
