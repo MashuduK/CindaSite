@@ -254,3 +254,49 @@ footer {
 .slick-dots li.slick-active button:before {
     color: #003f7f;
 }
+/* Centered Contact Section */
+#contact {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-item i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #007BFF;
+}
