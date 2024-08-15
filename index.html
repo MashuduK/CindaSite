@@ -3,112 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucinda G. Mulaudzi | Your Professional Partner</title>
+    <title>Lucinda G. Mulaudzi | Professional Therapist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #5c6bc0;
+            --secondary-color: #8e99f3;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --accent-color: #ff9800;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(92, 107, 192, 0.8), rgba(142, 153, 243, 0.8)), url('/api/placeholder/1200/800') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .btn:hover {
+            background-color: #f57c00;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .hero-buttons {
+            margin-top: 2rem;
+        }
+
+        section {
+            padding: 5rem 10%;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .booking-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .testimonials {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .testimonial-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .testimonial-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .testimonial {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img src="images/2.png" alt="Lucinda's Logo">
+                <img src="./images/2.png" alt="Lucinda G. Mulaudzi Logo">
             </div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#qualifications">Qualifications</a></li>
                 <li><a href="#booking">Book Now</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="./Portfolio/index.html">Portfolio</a></li>
+                <li><a href="./Portfolio/index.html" class="btn btn-outline">Portfolio</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="hero">
-            <div class="content">
+        <section class="hero">
+            <div class="hero-content">
                 <h1>Lucinda G. Mulaudzi</h1>
-                <h2>Your Administrative & Psychological Support Partner</h2>
-                <p>Organized Solutions. Compassionate Guidance.</p>
-                <a href="#booking" class="button">Book a Session</a>
+                <p>Professional Therapist & Administrative Support</p>
+                <a href="#booking" class="btn">Book a Session</a>
+                <a href="./Portfolio/index.html" class="btn btn-outline">Hire Me</a>
             </div>
-            <img src="images/profile.jpg" alt="Lucinda G. Mulaudzi">
         </section>
 
         <section id="about">
             <h2>About Lucinda</h2>
-            <p>I am a versatile professional with expertise in both administrative support and psychology. I thrive on helping individuals and organizations achieve their goals through efficient processes and compassionate guidance.</p>
-            <p>Whether you need help streamlining your workflow, managing projects, or seeking support for your mental well-being, I am here to offer my expertise and dedication.</p> 
+            <p>As a versatile professional with expertise in both psychology and administrative support, I am dedicated to helping individuals and organizations achieve their goals. With a compassionate approach and efficient processes, I offer a unique blend of therapeutic guidance and organizational skills to support your personal and professional growth.</p>
         </section>
 
         <section id="services">
             <h2>Services</h2>
-            <div class="service-grid">
-                <div class="service">
-                    <h3>Administrative Support</h3>
-                    <ul>
-                        <li>Project Management</li>
-                        <li>Data Entry & Analysis</li>
-                        <li>Scheduling & Coordination</li>
-                        <li>Client Communication</li>
-                    </ul>
-                </div>
-                <div class="service">
+            <div class="services">
+                <div class="service-card">
+                    <i class="fas fa-brain"></i>
                     <h3>Psychological Services</h3>
-                    <ul>
-                        <li>Individual Counseling</li>
-                        <li>Stress Management</li>
-                        <li>Coping Skills Development</li>
-                        <li>Personal Growth & Development</li>
-                    </ul>
+                    <p>Individual counseling, stress management, and personal development to support your mental well-being.</p>
                 </div>
-            </div>
-        </section>
-
-        <section id="qualifications">
-            <h2>Qualifications</h2>
-            <div class="qualification-slider">
-                <div class="qualification">
-                    <img src="images/IMG-20240109-WA0031.jpg" alt="Qualification 1">
-                    <p>Practioner Accreditation</p>
+                <div class="service-card">
+                    <i class="fas fa-tasks"></i>
+                    <h3>Administrative Support</h3>
+                    <p>Project management, data analysis, and organizational assistance to streamline your workflow.</p>
                 </div>
-                <div class="qualification">
-                    <img src="images/IMG-20240109-WA0030.jpg" alt="Qualification 2">
-                    <p>Diploma of Profesional study in Profesional child Psychology</p>
+                <div class="service-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Group Therapy</h3>
+                    <p>Facilitated group sessions to foster connection, growth, and shared experiences.</p>
                 </div>
-                <div class="qualification">
-                    <img src="Certs/ETD_HCA_000013_Lucinda Ndmere_page-0001.jpg" alt="Qualification 1">
-                    <p>Health Care Assistant</p>
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Performance Coaching</h3>
+                    <p>Tailored strategies to enhance your professional performance and achieve your career goals.</p>
                 </div>
-                <div class="qualification">
-                    <img src="Certs/Lucinda Ndemera - Certificate of Completion_page-0001.jpg" alt="Qualification 2">
-                    <p>Diploma in HR, Book Keeping,and Payroll Management</p>
-                </div>
-                <div class="qualification">
-                    <img src="Certs/Lucinda Ndemera - CPD UK and IPHM - Updated_page-0001.jpg" alt="Qualification 1">
-                    <p>Completion in HR, Book Keeping,and Payroll Management</p>
-                </div>
-                <div class="qualification">
-                    <img src="Certs/PDF_ecd certificate _page-0001.jpg" alt="Qualification 2">
-                    <p>Advanced Au Pair and Night Nurse Care</p>
-                </div>
-                <div class="qualification">
-                    <img src="Certs/PDF_LGM secretary diploma _page-0001.jpg" alt="Qualification 1">
-                    <p></p>
-                </div>
-                <div class="qualification">
-                    <img src="Certs/PDF_OA skills certificate _page-0001.jpg" alt="Qualification 2">
-                    <p></p>
-                </div>
-                <!-- Add more qualification items here -->
             </div>
         </section>
 
         <section id="booking">
             <h2>Book a Session</h2>
-            <form id="bookingForm" action="https://formspree.io/f/myyrrnkd" method="POST">
+            <form class="booking-form" action="https://formspree.io/f/myyrrnkd" method="POST">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -120,8 +284,10 @@
                 <div class="form-group">
                     <label for="service">Service:</label>
                     <select id="service" name="service">
-                        <option value="administrative">Administrative Support</option>
                         <option value="psychological">Psychological Services</option>
+                        <option value="administrative">Administrative Support</option>
+                        <option value="group">Group Therapy</option>
+                        <option value="coaching">Performance Coaching</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -130,47 +296,86 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message"></textarea>
+                    <textarea id="message" name="message" rows="4"></textarea>
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit" class="btn">Book Now</button>
             </form>
         </section>
-        
-        
 
-        <section id="contact">
-            <div class="contact-content">
-                <h2>Contact</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>Email: lgm.kwg@gmail.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <p>Phone: +27 71 922 5032</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Address: Capte Town, South Africa </p>
-                    </div>
+        <section id="testimonials" class="testimonials">
+            <h2>Client Testimonials</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"Lucinda's unique blend of psychological insight and administrative expertise has been transformative for our organization. Her guidance has improved both our team dynamics and operational efficiency."</p>
+                    <p><strong>- Sarah J., CEO</strong></p>
                 </div>
-                <div class="social-icons">
-                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <div class="testimonial">
+                    <p>"I've seen remarkable personal growth through my sessions with Lucinda. Her compassionate approach and practical strategies have helped me overcome long-standing challenges."</p>
+                    <p><strong>- Michael T., Individual Client</strong></p>
+                </div>
+                <div class="testimonial">
+                    <p>"Lucinda's performance coaching has been instrumental in advancing my career. Her insights and support have given me the confidence to take on new challenges and excel in my role."</p>
+                    <p><strong>- Emily R., Marketing Director</strong></p>
                 </div>
             </div>
         </section>
-        
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>Email: lgm.kwg@gmail.com</p>
+            <p>Phone: +27 71 922 5032</p>
+            <p>Address: Cape Town, South Africa</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Lucinda G. Mulaudzi. All rights reserved.</p>
     </footer>
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="script.js"></script>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple testimonial slider
+        const testimonialSlider = document.querySelector('.testimonial-slider');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        testimonialSlider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - testimonialSlider.offsetLeft;
+            scrollLeft = testimonialSlider.scrollLeft;
+        });
+
+        testimonialSlider.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+
+        testimonialSlider.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+
+        testimonialSlider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - testimonialSlider.offsetLeft;
+            const walk = (x - startX) * 2;
+            testimonialSlider.scrollLeft = scrollLeft - walk;
+        });
+    </script>
 </body>
 </html>

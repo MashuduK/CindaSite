@@ -1,146 +1,230 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Lucinda G Mulaudzi - Portfolio</title>
-  <link rel="stylesheet" href="./style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Roboto&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucinda G Mulaudzi - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3a7bd5;
+            --secondary-color: #00d2ff;
+            --text-color: #333;
+            --bg-color: #f5f7fa;
+            --section-bg: #ffffff;
+        }
 
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        header {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .profile-container {
+            text-align: center;
+            padding: 6rem 2rem 2rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .profile-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            font-family: 'Bungee Shade', cursive;
+            margin-bottom: 0.5rem;
+        }
+
+        section {
+            padding: 3rem 2rem;
+            margin: 2rem auto;
+            background: var(--section-bg);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            list-style-type: none;
+            transition: transform 0.3s ease;
+        }
+
+        .skills-list li:hover {
+            transform: scale(1.05);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        /* Subtle background animation */
+        @keyframes subtleWave {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: subtleWave 15s ease infinite;
+            opacity: 0.05;
+        }
+    </style>
 </head>
 <body>
-  <div class="icon-container">
-    </div>
-  <header>
-  
-  
-    <nav>
-      <div class="logo">
-        <img src="../images/2.png" alt="Lucinda's Logo">
-    </div>
-    
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="LGM_CV1_Update.pdf" download>Download CV</a></li> 
-      </ul>
-    </nav>
-  </header>
-  <div class="profile-container">
-    <img src="profile2.jpg" alt="Lucinda G. Mulaudzi">
-    <h1 class="funky-text">Lucinda G Mulaudzi</h1>
-    <p class="subheading">Healthcare Professional | Administrative Expert</p>
-  </div>
+    <div class="animated-bg"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="LGM_CV1_Update.pdf" download>Download CV</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section id="about">
-    <h2 class="funky-text">About Me</h2>
-    <p>
-      A highly motivated and results-oriented healthcare professional with a passion for patient care and a proven ability to excel in administrative roles. My diverse experience spans patient administration, nursing assistance, training and development, and media monitoring. I am dedicated to providing exceptional service, ensuring smooth operations, and fostering positive patient experiences.
-    </p>
-    <div class="skills-container">
-      <h3>Core Skills</h3>
-      <ul class="skills-list">
-        <li>Patient Care</li>
-        <li>Administrative Tasks</li>
-        <li>Training & Development</li>
-        <li>Communication & Interpersonal Skills</li>
-        <li>Problem Solving</li>
-        <li>Customer Service</li>
-        <li>Sales</li>
-        <li>Team Building</li>
-        <li>Decision Making</li>
-        <li>Counseling</li>
-      </ul>
+    <div class="profile-container" id="home">
+        <img src="./profile2.jpg" alt="Lucinda G. Mulaudzi">
+        <h1 class="gradient-text">Lucinda G Mulaudzi</h1>
+        <p>Healthcare Professional | Administrative Expert</p>
     </div>
-  </section>
 
-  <section id="experience">
-    <h2 class="funky-text">Experience</h2>
-    <div class="job">
-      <h3>Patient Administrator</h3>
-      <h4>Morton & Partners Radiologists | Nov 2023 - Present</h4>
-      <ul>
-        <li>Greet, welcome, direct, and announce patients.</li>
-        <li>Book procedures, provide pre-examination info.</li>
-        <li>Accurately enter patient details and procedures.</li>
-        <li>Prepare invoices, take payments, and manage cash box.</li>
-      </ul>
-    </div>
-    <div class="job">
-      <h3>Nursing Assistant</h3>
-      <h4>SCP Radiology | Jun 2021 - Oct 2023</h4>
-      <ul>
-        <li>Transported patients to and from the radiology department.</li>
-        <li>Assisted radiologic technologists during procedures.</li>
-        <li>Scheduled patient appointments and procedures.</li>
-        <li>Developed and executed unit tests, performed system testing.</li>
-        <li>Troubleshot and resolved software defects and issues.</li>
-      </ul>
-    </div>
-    <div class="job">
-      <h3>Trainer and Part Time Lecturer</h3>
-      <h4>Edushere | Feb 2021 - Aug 2022</h4>
-      <ul>
-        <li>Developed and delivered training programs on various HR topics.</li>
-        <li>Lectured on HR principles and practices.</li>
-        <li>Facilitated interactive workshops and seminars.</li>
-      </ul>
-    </div>
-    <div class="job">
-      <h3>Broadcast Media Monitor Scanner</h3>
-      <h4>Newsclip | Feb 2018 - Jul 2018</h4>
-      <ul>
-        <li>Created summaries of broadcast content.</li>
-        <li>Entered data into databases accurately.</li>
-      </ul>
-    </div>
-  </section>
+    <section id="about">
+        <h2 class="gradient-text">About Me</h2>
+        <p>
+            A highly motivated and results-oriented healthcare professional with a passion for patient care and a proven ability to excel in administrative roles. My diverse experience spans patient administration, nursing assistance, training and development, and media monitoring. I am dedicated to providing exceptional service, ensuring smooth operations, and fostering positive patient experiences.
+        </p>
+        <div class="skills-container">
+            <h3 class="gradient-text">Core Skills</h3>
+            <ul class="skills-list">
+                <li>Patient Care</li>
+                <li>Administrative Tasks</li>
+                <li>Training & Development</li>
+                <li>Communication</li>
+                <li>Problem Solving</li>
+                <li>Customer Service</li>
+                <li>Sales</li>
+                <li>Team Building</li>
+                <li>Decision Making</li>
+                <li>Counseling</li>
+            </ul>
+        </div>
+    </section>
 
-  <section id="education">
-    <h2 class="funky-text">Education & Certifications</h2>
-    <ul>
-      <li>Certificate of PALS & ACLS, TeamHealth Institute (2021-2022)</li>
-      <li>Certificate of Advance Au Pair & Night Nursing & ECD & CPR, Chilton International (2021)</li>
-      <li>Certificate of Health Care Assistant, Edusphere Training and Development (2020-2021)</li>
-      <li>Diploma of Counselling and Child Psychology, KEW Training Academy (2019-2020)</li>
-      <li>Certificate of Human Resource Management, Oxbridge Academy (2017-2019)</li>
-      <li>Diploma of Secretarial/PA, CAD Training Centre (2012)</li>
-    </ul>
-  </section>
+    <section id="experience">
+        <h2 class="gradient-text">Experience</h2>
+        <!-- Experience content here -->
+    </section>
 
-  <section id="contact">
-    <h2 class="funky-text">Contact Me</h2>
-    <form id="contact-form">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <button type="submit">Send</button>
+    <section id="education">
+        <h2 class="gradient-text">Education & Certifications</h2>
+        <!-- Education content here -->
+    </section>
 
-    </form>
-    <!-- Social Icons -->
-    <div class="social-icons">
-      <a href="https://www.facebook.com/profile.php?id=100083951227244" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-      <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-      <!-- Add more social icons as needed -->
-  </div>
-  </section>
+    <section id="contact">
+        <h2 class="gradient-text">Contact Me</h2>
+        <!-- Contact form here -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100083951227244" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2024 Lucinda G Mulaudzi</p>
-  </footer>
-
-  <script src="script.js"></script> 
+    <footer>
+        <p>&copy; 2024 Lucinda G Mulaudzi</p>
+    </footer>
 </body>
 </html>
